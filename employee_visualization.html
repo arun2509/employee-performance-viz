@@ -47,6 +47,53 @@ def ensure_data(csv_path: str) -> None:
         })
     pd.DataFrame(rows).to_csv(csv_path, index=False)
 
+
+<body>
+  <h1>📊 Employee Performance Visualization</h1>
+
+  <h2>Python Code Used</h2>
+  <pre>
+import plotly.graph_objects as go
+
+# Sample employee performance data
+employees = ["Alice", "Bob", "Charlie", "David", "Eve"]
+performance = [75, 85, 90, 60, 95]
+
+fig = go.Figure([go.Bar(x=employees, y=performance, marker_color="skyblue")])
+fig.update_layout(
+    title="Employee Performance",
+    xaxis_title="Employee",
+    yaxis_title="Performance Score",
+    template="plotly_white"
+)
+
+# Save as HTML
+fig.write_html("employee_visualization.html", include_plotlyjs="cdn", full_html=False)
+  </pre>
+
+  <h2>Visualization Output</h2>
+  <div id="chart"></div>
+
+  <script>
+    // Same chart embedded directly
+    var data = [{
+      x: ["Alice", "Bob", "Charlie", "David", "Eve"],
+      y: [75, 85, 90, 60, 95],
+      type: "bar",
+      marker: { color: "skyblue" }
+    }];
+
+    var layout = {
+      title: "Employee Performance",
+      xaxis: { title: "Employee" },
+      yaxis: { title: "Performance Score" }
+    };
+
+    Plotly.newPlot("chart", data, layout);
+  </script>
+</body>
+
+
 def main() -> None:
     ensure_data(CSV_PATH)
     df = pd.read_csv(CSV_PATH)
