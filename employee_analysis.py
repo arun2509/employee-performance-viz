@@ -81,13 +81,13 @@ def main() -> None:
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>Employee Visualization</title>
       <style>
-        body {{ font-family: Arial, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }}
-        h1, h2 {{ margin: 0.5rem 0; }}
-        .meta {{ color: #555; font-size: 0.95rem; }}
-        .figure {{ text-align: center; margin: 1.5rem 0; }}
-        pre {{ background: #f6f8fa; padding: 1rem; overflow-x: auto; border-radius: 8px; }}
-        code {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; }}
-        .count {{ font-weight: bold; }}
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        h1, h2 { margin: 0.5rem 0; }
+        .meta { color: #555; font-size: 0.95rem; }
+        .figure { text-align: center; margin: 1.5rem 0; }
+        pre { background: #f6f8fa; padding: 1rem; overflow-x: auto; border-radius: 8px; }
+        code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; }
+        .count { font-weight: bold; }
       </style>
     </head>
     <body>
