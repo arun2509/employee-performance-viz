@@ -46,6 +46,27 @@ def ensure_data(csv_path: str) -> None:
         })
     pd.DataFrame(rows).to_csv(csv_path, index=False)
 
+import plotly.express as px
+import pandas as pd
+
+# Sample employee performance dataset
+data = {
+    "Employee": ["Alice", "Bob", "Charlie", "David", "Eve"],
+    "Department": ["HR", "IT", "Finance", "IT", "HR"],
+    "Performance": [85, 92, 78, 88, 95]
+}
+df = pd.DataFrame(data)
+
+# Create histogram
+fig = px.histogram(df, x="Department", y="Performance", histfunc="avg", 
+                   title="Average Employee Performance by Department")
+
+# Save interactive HTML (includes chart!)
+fig.write_html("employee_visualization.html", include_plotlyjs="cdn")
+
+print("✅ employee_visualization.html generated with chart.")
+
+
 def main() -> None:
     ensure_data(CSV_PATH)
     df = pd.read_csv(CSV_PATH)
