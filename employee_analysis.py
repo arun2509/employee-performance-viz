@@ -50,7 +50,7 @@ def main() -> None:
 
     # Frequency count for "Operations"
     operations_count = (df["department"] == "Operations").sum()
-    print(f'Frequency count for "Operations" department: {operations_count}')
+    print(f'The frequency count for "Operations" department ({operations_count})')
 
     # Plotly histogram
     fig = px.histogram(
