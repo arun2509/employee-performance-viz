@@ -12,6 +12,8 @@ Updated: 2025-08-20
 import os
 import random
 import pandas as pd
+import matplotlib as plt
+import seaborn as sns
 import plotly.express as px
 
 CSV_PATH = "employee_data.csv"
